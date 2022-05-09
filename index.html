@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="background">
+            <div class="content">
+                <p class="title">Virtual keyboard</p>
+                <textarea name="" id="textarea" cols="50" rows="10"></textarea>
+                <div class="keyboard">
+                    <div class="row">
+                        <div class="keyboard-key key backquote">
+                            <span class="rus">
+                                <span class="caseDown">ё</span>
+                                <span class="caseUp">Ё</span>
+                                <span class="caps">Ё</span>
+                                <span class="shiftCaps">ё</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">`</span>
+                                <span class="caseUp">~</span>
+                                <span class="caps">`</span>
+                                <span class="shiftCaps">~</span>
+                            </span>
+                        </div>
+                        <div onclick="funcWrite()" class="keyboard-key key Digit1">
+                            <span  class="rus">
+                                <span class="caseDown">1</span>
+                                <span class="caseUp">!</span>
+                                <span class="caps">1</span>
+                                <span class="shiftCaps">!</span>
+                            </span>
+                            <span  id="qwe" class="eng">
+                                <span class="caseDown">1</span>
+                                <span class="caseUp">!</span>
+                                <span class="caps">1</span>
+                                <span class="shiftCaps">!</span>
+                            </span>
+                        </div>
+                        <div class="keyboard-key key Digit2">
+                            <span class="rus">
+                                <span class="caseDown">2</span>
+                                <span class="caseUp">"</span>
+                                <span class="caps">2</span>
+                                <span class="shiftCaps">"</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">2</span>
+                                <span class="caseUp">"</span>
+                                <span class="caps">2</span>
+                                <span class="shiftCaps">"</span>
+                            </span>
+                        </div>
+                        <div class="keyboard-key key Digit3">
+                            <span class="rus">
+                                <span class="caseDown">3</span>
+                                <span class="caseUp">№</span>
+                                <span class="caps">3</span>
+                                <span class="shiftCaps">№</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">3</span>
+                                <span class="caseUp">#</span>
+                                <span class="caps">3</span>
+                                <span class="shiftCaps">#</span>
+                            </span>
+                        </div>
+                        <div class="keyboard-key key Digit4">
+                            <span class="rus">
+                                <span class="caseDown">4</span>
+                                <span class="caseUp">;</span>
+                                <span class="caps">4</span>
+                                <span class="shiftCaps">;</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">4</span>
+                                <span class="caseUp">$</span>
+                                <span class="caps">4</span>
+                                <span class="shiftCaps">$</span>
+                            </span>
+                        </div>
+                        <div class="keyboard-key key Digit5">
+                            <span class="rus">
+                                <span class="caseDown">5</span>
+                                <span class="caseUp">%</span>
+                                <span class="caps">5</span>
+                                <span class="shiftCaps">%</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">5</span>
+                                <span class="caseUp">%</span>
+                                <span class="caps">5</span>
+                                <span class="shiftCaps">%</span>
+                            </span>
+                        </div>
+                        <div class="keyboard-key key Digit6">
+                            <span class="rus">
+                                <span class="caseDown">6</span>
+                                <span class="caseUp">:</span>
+                                <span class="caps">6</span>
+                                <span class="shiftCaps">:</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">6</span>
+                                <span class="caseUp">^</span>
+                                <span class="caps">6</span>
+                                <span class="shiftCaps">^</span>
+                            </span>
+                        </div>
+                        <div class="keyboard-key key Digit7">
+                            <span class="rus">
+                                <span class="caseDown">7</span>
+                                <span class="caseUp">?</span>
+                                <span class="caps">7</span>
+                                <span class="shiftCaps">7</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">7</span>
+                                <span class="caseUp">&</span>
+                                <span class="caps">7</span>
+                                <span class="shiftCaps">&</span>
+                            </span>
+                        </div>
+                        <div class="keyboard-key key Digit8">
+                            <span class="rus">
+                                <span class="caseDown">8</span>
+                                <span class="caseUp">*</span>
+                                <span class="caps">8</span>
+                                <span class="shiftCaps">*</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">8</span>
+                                <span class="caseUp">*</span>
+                                <span class="caps">8</span>
+                                <span class="shiftCaps">8</span>
+                            </span>
+                        </div>
+                        <div class="keyboard-key key Digit9">
+                            <span class="rus">
+                                <span class="caseDown">9</span>
+                                <span class="caseUp">(</span>
+                                <span class="caps">9</span>
+                                <span class="shiftCaps">(</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">9</span>
+                                <span class="caseUp">(</span>
+                                <span class="caps">9</span>
+                                <span class="shiftCaps">(</span>
+                            </span>
+                        </div>
+                        <div class="keyboard-key key Digit0">
+                            <span class="rus">
+                                <span class="caseDown">0</span>
+                                <span class="caseUp">)</span>
+                                <span class="caps">0</span>
+                                <span class="shiftCaps">)</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">0</span>
+                                <span class="caseUp">)</span>
+                                <span class="caps">0</span>
+                                <span class="shiftCaps">)</span>
+                            </span>
+                        </div>
+                        <div class="keyboard-key key Minus">
+                            <span class="rus">
+                                <span class="caseDown">-</span>
+                                <span class="caseUp">_</span>
+                                <span class="caps">-</span>
+                                <span class="shiftCaps">_</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">-</span>
+                                <span class="caseUp">_</span>
+                                <span class="caps">-</span>
+                                <span class="shiftCaps">_</span>
+                            </span>
+                        </div>
+                        <div class="keyboard-key key Equal">
+                            <span class="rus">
+                                <span class="caseDown">=</span>
+                                <span class="caseUp">+</span>
+                                <span class="caps">=</span>
+                                <span class="shiftCaps">+</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">=</span>
+                                <span class="caseUp">+</span>
+                                <span class="caps">=</span>
+                                <span class="shiftCaps">+</span>
+                            </span>
+                        </div>
+                        <div onclick="fbackSpase()" class="keyboard-key key Backsapce">
+                            <span class="rus">
+                                <span class="caseDown">Backsapce</span>
+                                <span class="caseUp">Backsapce</span>
+                                <span class="caps">Backsapce</span>
+                                <span class="shiftCaps">Backsapce</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">Backsapce</span>
+                                <span class="caseUp">Backsapce</span>
+                                <span class="caps">Backsapce</span>
+                                <span class="shiftCaps">Backsapce</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div onclick="funcTab()" class="key keyboard-key Tab">
+                            <span class="rus">
+                                <span class="caseDown">Tab</span>
+                                <span class="caseUp">Tab</span>
+                                <span class="caps">Tab</span>
+                                <span class="shiftCaps">Tab</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">Tab</span>
+                                <span class="caseUp">Tab</span>
+                                <span class="caps">Tab</span>
+                                <span class="shiftCaps">Tab</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyQ">
+                            <span class="rus">
+                                <span class="caseDown">й</span>
+                                <span class="caseUp">Й</span>
+                                <span class="caps">Й</span>
+                                <span class="shiftCaps">й</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">q</span>
+                                <span class="caseUp">Q</span>
+                                <span class="caps">Q</span>
+                                <span class="shiftCaps">q</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyW">
+                            <span class="rus">
+                                <span class="caseDown">ц</span>
+                                <span class="caseUp">Ц</span>
+                                <span class="caps">Ц</span>
+                                <span class="shiftCaps">ц</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">w</span>
+                                <span class="caseUp">W</span>
+                                <span class="caps">W</span>
+                                <span class="shiftCaps">w</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyE">
+                            <span class="rus">
+                                <span class="caseDown">у</span>
+                                <span class="caseUp">У</span>
+                                <span class="caps">У</span>
+                                <span class="shiftCaps">у</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">e</span>
+                                <span class="caseUp">E</span>
+                                <span class="caps">E</span>
+                                <span class="shiftCaps">e</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyR">
+                            <span class="rus">
+                                <span class="caseDown">к</span>
+                                <span class="caseUp">К</span>
+                                <span class="caps">К</span>
+                                <span class="shiftCaps">к</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">r</span>
+                                <span class="caseUp">R</span>
+                                <span class="caps">R</span>
+                                <span class="shiftCaps">r</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyT">
+                            <span class="rus">
+                                <span class="caseDown">е</span>
+                                <span class="caseUp">Е</span>
+                                <span class="caps">Е</span>
+                                <span class="shiftCaps">е</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">t</span>
+                                <span class="caseUp">T</span>
+                                <span class="caps">T</span>
+                                <span class="shiftCaps">t</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyY">
+                            <span class="rus">
+                                <span class="caseDown">н</span>
+                                <span class="caseUp">Н</span>
+                                <span class="caps">Н</span>
+                                <span class="shiftCaps">н</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">y</span>
+                                <span class="caseUp">Y</span>
+                                <span class="caps">Y</span>
+                                <span class="shiftCaps">y</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyU">
+                            <span class="rus">
+                                <span class="caseDown">г</span>
+                                <span class="caseUp">Г</span>
+                                <span class="caps">Г</span>
+                                <span class="shiftCaps">г</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">u</span>
+                                <span class="caseUp">U</span>
+                                <span class="caps">U</span>
+                                <span class="shiftCaps">u</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyI">
+                            <span class="rus">
+                                <span class="caseDown">ш</span>
+                                <span class="caseUp">Ш</span>
+                                <span class="caps">Ш</span>
+                                <span class="shiftCaps">ш</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">i</span>
+                                <span class="caseUp">I</span>
+                                <span class="caps">I</span>
+                                <span class="shiftCaps">i</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyO">
+                            <span class="rus">
+                                <span class="caseDown">щ</span>
+                                <span class="caseUp">Щ</span>
+                                <span class="caps">Щ</span>
+                                <span class="shiftCaps">щ</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">o</span>
+                                <span class="caseUp">O</span>
+                                <span class="caps">O</span>
+                                <span class="shiftCaps">o</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyP">
+                            <span class="rus">
+                                <span class="caseDown">з</span>
+                                <span class="caseUp">З</span>
+                                <span class="caps">З</span>
+                                <span class="shiftCaps">з</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">p</span>
+                                <span class="caseUp">P</span>
+                                <span class="caps">P</span>
+                                <span class="shiftCaps">p</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key BracketLeft">
+                            <span class="rus">
+                                <span class="caseDown">х</span>
+                                <span class="caseUp">Х</span>
+                                <span class="caps">Х</span>
+                                <span class="shiftCaps">х</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">[</span>
+                                <span class="caseUp">{</span>
+                                <span class="caps">[</span>
+                                <span class="shiftCaps">{</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key BracketRight">
+                            <span class="rus">
+                                <span class="caseDown">ъ</span>
+                                <span class="caseUp">Ъ</span>
+                                <span class="caps">Ъ</span>
+                                <span class="shiftCaps">ъ</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">]</span>
+                                <span class="caseUp">}</span>
+                                <span class="caps">]</span>
+                                <span class="shiftCaps">}</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key Backslash">
+                            <span class="rus">
+                                <span class="caseDown">\</span>
+                                <span class="caseUp">/</span>
+                                <span class="caps">\</span>
+                                <span class="shiftCaps">/</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">\</span>
+                                <span class="caseUp">|</span>
+                                <span class="caps">\</span>
+                                <span class="shiftCaps">|</span>
+                            </span>
+                        </div>
+                        <div onclick="fdell()" class="key keyboard-key Delete">
+                            <span class="rus">
+                                <span class="caseDown">Del</span>
+                                <span class="caseUp">Del</span>
+                                <span class="caps">Del</span>
+                                <span class="shiftCaps">Del</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">Del</span>
+                                <span class="caseUp">Del</span>
+                                <span class="caps">Del</span>
+                                <span class="shiftCaps">Del</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="key keyboard-key CapsLock">
+                            <span class="rus">
+                                <span class="caseDown">CapsLock</span>
+                                <span class="caseUp">CapsLock</span>
+                                <span class="caps">CapsLock</span>
+                                <span class="shiftCaps">CapsLock</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">CapsLock</span>
+                                <span class="caseUp">CapsLock</span>
+                                <span class="caps">CapsLock</span>
+                                <span class="shiftCaps">CapsLock</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyA">
+                            <span class="rus">
+                                <span class="caseDown">ф</span>
+                                <span class="caseUp">Ф</span>
+                                <span class="caps">Ф</span>
+                                <span class="shiftCaps">ф</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">a</span>
+                                <span class="caseUp">A</span>
+                                <span class="caps">A</span>
+                                <span class="shiftCaps">a</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyS">
+                            <span class="rus">
+                                <span class="caseDown">ы</span>
+                                <span class="caseUp">Ы</span>
+                                <span class="caps">Ы</span>
+                                <span class="shiftCaps">ы</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">s</span>
+                                <span class="caseUp">S</span>
+                                <span class="caps">S</span>
+                                <span class="shiftCaps">s</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyD">
+                            <span class="rus">
+                                <span class="caseDown">в</span>
+                                <span class="caseUp">В</span>
+                                <span class="caps">В</span>
+                                <span class="shiftCaps">в</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">d</span>
+                                <span class="caseUp">D</span>
+                                <span class="caps">D</span>
+                                <span class="shiftCaps">d</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyF">
+                            <span class="rus">
+                                <span class="caseDown">а</span>
+                                <span class="caseUp">А</span>
+                                <span class="caps">А</span>
+                                <span class="shiftCaps">а</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">f</span>
+                                <span class="caseUp">F</span>
+                                <span class="caps">F</span>
+                                <span class="shiftCaps">f</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyG">
+                            <span class="rus">
+                                <span class="caseDown">п</span>
+                                <span class="caseUp">П</span>
+                                <span class="caps">П</span>
+                                <span class="shiftCaps">п</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">g</span>
+                                <span class="caseUp">G</span>
+                                <span class="caps">G</span>
+                                <span class="shiftCaps">g</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyH">
+                            <span class="rus">
+                                <span class="caseDown">р</span>
+                                <span class="caseUp">Р</span>
+                                <span class="caps">Р</span>
+                                <span class="shiftCaps">р</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">h</span>
+                                <span class="caseUp">H</span>
+                                <span class="caps">H</span>
+                                <span class="shiftCaps">h</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyJ">
+                            <span class="rus">
+                                <span class="caseDown">о</span>
+                                <span class="caseUp">О</span>
+                                <span class="caps">О</span>
+                                <span class="shiftCaps">О</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">j</span>
+                                <span class="caseUp">J</span>
+                                <span class="caps">J</span>
+                                <span class="shiftCaps">j</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyK">
+                            <span class="rus">
+                                <span class="caseDown">л</span>
+                                <span class="caseUp">Л</span>
+                                <span class="caps">Л</span>
+                                <span class="shiftCaps">л</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">k</span>
+                                <span class="caseUp">K</span>
+                                <span class="caps">K</span>
+                                <span class="shiftCaps">k</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyL">
+                            <span class="rus">
+                                <span class="caseDown">д</span>
+                                <span class="caseUp">Д</span>
+                                <span class="caps">Д</span>
+                                <span class="shiftCaps">д</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">l</span>
+                                <span class="caseUp">L</span>
+                                <span class="caps">L</span>
+                                <span class="shiftCaps">l</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key Semicolon">
+                            <span class="rus">
+                                <span class="caseDown">ж</span>
+                                <span class="caseUp">Ж</span>
+                                <span class="caps">Ж</span>
+                                <span class="shiftCaps">ж</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">;</span>
+                                <span class="caseUp">:</span>
+                                <span class="caps">;</span>
+                                <span class="shiftCaps">:</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key Quote">
+                            <span class="rus">
+                                <span class="caseDown">э</span>
+                                <span class="caseUp">Э</span>
+                                <span class="caps">Э</span>
+                                <span class="shiftCaps">э</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">'</span>
+                                <span class="caseUp">"</span>
+                                <span class="caps">'</span>
+                                <span class="shiftCaps">"</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key Enter">
+                            <span class="rus">
+                                <span class="caseDown">Enter</span>
+                                <span class="caseUp">Enter</span>
+                                <span class="caps">Enter</span>
+                                <span class="shiftCaps">Enter</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">Enter</span>
+                                <span class="caseUp">Enter</span>
+                                <span class="caps">Enter</span>
+                                <span class="shiftCaps">Enter</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="key keyboard-key ShiftLeft">
+                            <span class="rus">
+                                <span class="caseDown">Shift</span>
+                                <span class="caseUp">Shift</span>
+                                <span class="caps">Shift</span>
+                                <span class="shiftCaps">Shift</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">Shift</span>
+                                <span class="caseUp">Shift</span>
+                                <span class="caps">Shift</span>
+                                <span class="shiftCaps">Shift</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyZ">
+                            <span class="rus">
+                                <span class="caseDown">я</span>
+                                <span class="caseUp">Я</span>
+                                <span class="caps">Я</span>
+                                <span class="shiftCaps">я</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">z</span>
+                                <span class="caseUp">Z</span>
+                                <span class="caps">Z</span>
+                                <span class="shiftCaps">z</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyX">
+                            <span class="rus">
+                                <span class="caseDown">ч</span>
+                                <span class="caseUp">Ч</span>
+                                <span class="caps">Ч</span>
+                                <span class="shiftCaps">ч</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">x</span>
+                                <span class="caseUp">X</span>
+                                <span class="caps">X</span>
+                                <span class="shiftCaps">x</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyC">
+                            <span class="rus">
+                                <span class="caseDown">с</span>
+                                <span class="caseUp">С</span>
+                                <span class="caps">С</span>
+                                <span class="shiftCaps">с</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">c</span>
+                                <span class="caseUp">C</span>
+                                <span class="caps">C</span>
+                                <span class="shiftCaps">c</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyV">
+                            <span class="rus">
+                                <span class="caseDown">м</span>
+                                <span class="caseUp">М</span>
+                                <span class="caps">М</span>
+                                <span class="shiftCaps">м</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">v</span>
+                                <span class="caseUp">V</span>
+                                <span class="caps">V</span>
+                                <span class="shiftCaps">v</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyB">
+                            <span class="rus">
+                                <span class="caseDown">и</span>
+                                <span class="caseUp">И</span>
+                                <span class="caps">И</span>
+                                <span class="shiftCaps">и</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">b</span>
+                                <span class="caseUp">B</span>
+                                <span class="caps">B</span>
+                                <span class="shiftCaps">b</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyN">
+                            <span class="rus">
+                                <span class="caseDown">т</span>
+                                <span class="caseUp">Т</span>
+                                <span class="caps">Т</span>
+                                <span class="shiftCaps">т</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">n</span>
+                                <span class="caseUp">N</span>
+                                <span class="caps">N</span>
+                                <span class="shiftCaps">n</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key KeyM">
+                            <span class="rus">
+                                <span class="caseDown">ь</span>
+                                <span class="caseUp">Ь</span>
+                                <span class="caps">Ь</span>
+                                <span class="shiftCaps">ь</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">m</span>
+                                <span class="caseUp">M</span>
+                                <span class="caps">M</span>
+                                <span class="shiftCaps">m</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key Comma">
+                            <span class="rus">
+                                <span class="caseDown">б</span>
+                                <span class="caseUp">Б</span>
+                                <span class="caps">Б</span>
+                                <span class="shiftCaps">б</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">,</span>
+                                <span class="caseUp"><</span>
+                                <span class="caps">,</span>
+                                <span class="shiftCaps"><</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key Period">
+                            <span class="rus">
+                                <span class="caseDown">ю</span>
+                                <span class="caseUp">Ю</span>
+                                <span class="caps">Ю</span>
+                                <span class="shiftCaps">ю</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">.</span>
+                                <span class="caseUp">></span>
+                                <span class="caps">.</span>
+                                <span class="shiftCaps">></span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key Slash">
+                            <span class="rus">
+                                <span class="caseDown">.</span>
+                                <span class="caseUp">,</span>
+                                <span class="caps">.</span>
+                                <span class="shiftCaps">,</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">/</span>
+                                <span class="caseUp">?</span>
+                                <span class="caps">/</span>
+                                <span class="shiftCaps">?</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key ShiftRight">
+                            <span class="rus">
+                                <span class="caseDown">Shift</span>
+                                <span class="caseUp">Shift</span>
+                                <span class="caps">Shift</span>
+                                <span class="shiftCaps">Shift</span>
+                            </span>
+                            <span class="eng">
+                                <span class="caseDown">Shift</span>
+                                <span class="caseUp">Shift</span>
+                                <span class="caps">Shift</span>
+                                <span class="shiftCaps">Shift</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="key keyboard-key ControlLeft">
+                            <span class="rus"> 
+                                <span class="caseDown">Ctrl</span>
+                                <span class="caseUp">Ctrl</span>
+                                <span class="caps">Ctrl</span>
+                                <span class="shiftCaps">Ctrl</span>
+                            </span>
+                            <span class="eng"> 
+                                <span class="caseDown">Ctrl</span>
+                                <span class="caseUp">Ctrl</span>
+                                <span class="caps">Ctrl</span>
+                                <span class="shiftCaps">Ctrl</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key MetaLeft">
+                            <span class="rus"> 
+                                <span class="caseDown">Win</span>
+                                <span class="caseUp">Win</span>
+                                <span class="caps">Win</span>
+                                <span class="shiftCaps">Win</span>
+                            </span>
+                            <span class="eng"> 
+                                <span class="caseDown">Win</span>
+                                <span class="caseUp">Win</span>
+                                <span class="caps">Win</span>
+                                <span class="shiftCaps">Win</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key AltLeft">
+                            <span class="rus"> 
+                                <span class="caseDown">Alt</span>
+                                <span class="caseUp">Alt</span>
+                                <span class="caps">Alt</span>
+                                <span class="shiftCaps">Alt</span>
+                            </span>
+                            <span class="eng"> 
+                                <span class="caseDown">Alt</span>
+                                <span class="caseUp">Alt</span>
+                                <span class="caps">Alt</span>
+                                <span class="shiftCaps">Alt</span>
+                            </span>
+                        </div>
+                        <div onclick="funcSpace()" class="key keyboard-key Space">
+                            <span class="rus"> 
+                                <span class="caseDown"> </span>
+                                <span class="caseUp"> </span>
+                                <span class="caps"> </span>
+                                <span class="shiftCaps"> </span>
+                            </span>
+                            <span class="eng"> 
+                                <span class="caseDown"> </span>
+                                <span class="caseUp"> </span>
+                                <span class="caps"> </span>
+                                <span class="shiftCaps"> </span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key AltRight">
+                            <span class="rus"> 
+                                <span class="caseDown">Alt</span>
+                                <span class="caseUp">Alt</span>
+                                <span class="caps">Alt</span>
+                                <span class="shiftCaps">Alt</span>
+                            </span>
+                            <span class="eng"> 
+                                <span class="caseDown">Alt</span>
+                                <span class="caseUp">Alt</span>
+                                <span class="caps">Alt</span>
+                                <span class="shiftCaps">Alt</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key ControlRight">
+                            <span class="rus"> 
+                                <span class="caseDown">Ctrl</span>
+                                <span class="caseUp">Ctrl</span>
+                                <span class="caps">Ctrl</span>
+                                <span class="shiftCaps">Ctrl</span>
+                            </span>
+                            <span class="eng"> 
+                                <span class="caseDown">Ctrl</span>
+                                <span class="caseUp">Ctrl</span>
+                                <span class="caps">Ctrl</span>
+                                <span class="shiftCaps">Ctrl</span>
+                            </span>
+                        </div>
+                        <div class="key keyboard-key ArrowLeft">
+                            <span class="rus"> 
+                                <span class="caseDown">◄</span>
+                                <span class="caseUp">◄</span>
+                                <span class="caps">◄</span>
+                                <span class="shiftCaps">◄</span>
+                            </span>
+                            <span class="eng"> 
+                                <span class="caseDown">◄</span>
+                                <span class="caseUp">◄</span>
+                                <span class="caps">◄</span>
+                                <span class="shiftCaps">◄</span>
+                            </span>
+                        </div>
+                        <div class="arrowsGroup">
+                            <div class="key keyboard-key ArrowUp">
+                                <span class="rus"> 
+                                    <span class="caseDown">▲</span>
+                                <span class="caseUp">▲</span>
+                                <span class="caps">▲</span>
+                                <span class="shiftCaps">▲</span>
+                                </span>
+                                <span class="eng"> 
+                                    <span class="caseDown">▲</span>
+                                <span class="caseUp">▲</span>
+                                <span class="caps">▲</span>
+                                <span class="shiftCaps">▲</span>
+                                </span>
+                            </div>
+                            <div class="key keyboard-key ArrowDown">
+                                <span class="rus"> 
+                                    <span class="caseDown">▼</span>
+                                <span class="caseUp">▼</span>
+                                <span class="caps">▼</span>
+                                <span class="shiftCaps">▼</span>
+                                </span>
+                                <span class="eng"> 
+                                    <span class="caseDown">▼</span>
+                                <span class="caseUp">▼</span>
+                                <span class="caps">▼</span>
+                                <span class="shiftCaps">▼</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="key keyboard-key ArrowRight">
+                            <span class="rus"> 
+                                <span class="caseDown">►</span>
+                                <span class="caseUp">►</span>
+                                <span class="caps">►</span>
+                                <span class="shiftCaps">►</span>
+                            </span>
+                            <span class="eng"> 
+                                <span class="caseDown">►</span>
+                                <span class="caseUp">►</span>
+                                <span class="caps">►</span>
+                                <span class="shiftCaps">►</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
